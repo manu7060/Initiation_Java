@@ -1,0 +1,29 @@
+Caractere choix
+
+Afficher ("Calculer la surface du carré : c")
+Afficher ("Calculer la surface du rectangle : r")
+Afficher ("sortir : autre lettre")
+Afficher ("Entrez votre choix : ")
+choix = lireClavier()
+
+tant_que (choix == 'c' OU choix == 'r')
+	choisir (choix)
+		cas 'c'
+			// Calculer le carré
+			sortir
+		cas 'r'
+			// calculer le rectangle
+			sortir
+		défaut
+			Afficher ("Je sort")
+	fin-choisir
+	
+	Afficher ("Calculer la surface du carré : c")
+	Afficher ("Calculer la surface du rectangle : r")
+	Afficher ("sortir : autre lettre")
+	Afficher ("Entrez votre choix : ")
+	choix = lireClavier()
+	
+Fin tant_que
+ 
+ Afficher ("terminé")

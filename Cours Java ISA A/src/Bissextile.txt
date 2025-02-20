@@ -1,0 +1,15 @@
+// Année bissextile
+
+Entier annes
+
+Afficher ("Entrez une année : ")
+annee = lireClavier()
+
+Si (((annee % 4 == 0)  ET  (annee % 100 != 0)) OU (annee % 400 == 0)) 
+	alors
+		Afficher ("L'année est bissextile")
+	sinon
+		Afficher ("L'année n'est pas bissextile")
+fin-si
+
+Afficher ("Terminé")

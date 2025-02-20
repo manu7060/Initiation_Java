@@ -1,0 +1,19 @@
+
+Flottant cote, surface
+
+Afficher ("Entrez le cote ou 0 pour sortir")
+cote = lireClavier()
+
+
+Tant_que (cote > 0)
+	surface = cote * cote
+	Afficher ("La surface est de " + surface)
+
+	Afficher ("Entrez un nouveau coté ou 0 pour sortir")
+	cote = lireClavier()
+
+fin-tant_que
+
+
+
+Afficher ("Terminé")

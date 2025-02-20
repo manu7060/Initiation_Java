@@ -1,0 +1,26 @@
+Entier nbSeconde, reste
+Entier jour, heure, minute, seconde
+
+
+Afficher ("Entrez le nombre de secondes : ")
+nbSeconde = lireClavier()
+
+
+jour = nbSeconde / 86400
+
+reste = nbSeconde - (jour * 86400)
+
+heure = reste / 3600
+
+reste = nbSeconde - (jour * 86400) - (heure * 3600)
+
+minute = reste / 60
+
+reste = nbSeconde - (jour * 86400) - (heure * 3600) - (minute * 60)
+
+seconde = reste
+
+Afficher ("Le nombre de " + nbSeconde + " correpond à " + jour + " jours, " + minutes + " minutes et " + seconde + " secondes.")
+
+
+Afficher ("Terminé")
