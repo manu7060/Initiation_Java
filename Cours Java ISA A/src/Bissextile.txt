@@ -1,6 +1,6 @@
 // Année bissextile
 
-Entier annes
+Entier annee
 
 Afficher ("Entrez une année : ")
 annee = lireClavier()

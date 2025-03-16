@@ -1,0 +1,20 @@
+Chaine Phrase
+Chaine voyelle = "aeiouy";
+Entier nombreDeVoyelles = 0
+
+Pour (i=0; i<phrase.longueur; ++i)
+
+	Pour (j=0; j<voyelle.longueur; ++j)
+
+		si (phrase[i] == voyelle[j])
+			alors
+				++nombreDeVoyelles
+		fin-si
+
+	Fin-pour
+	
+Fin-pour
+
+
+Afficher ("J'ai trouvé : " + nombreDeVoyelles + " voyelles")
+Afficher ("Terminé")

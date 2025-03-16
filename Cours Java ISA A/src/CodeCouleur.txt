@@ -1,0 +1,77 @@
+Chaine couleur1, couleur2, couleur3, couleur4
+Entier resistance
+Flottant tolerance
+
+Afficher (Entrez la couleur 1 : ")
+couleur1 = lireClavier()
+
+Afficher (Entrez la couleur 2 : ")
+couleur1 = lireClavier()
+
+Afficher (Entrez la couleur 3 : ")
+couleur1 = lireClavier()
+
+Afficher (Entrez la couleur 4 : ")
+couleur1 = lireClavier()
+
+
+
+Choisir (couleur1)
+	cas "brun":
+		resistance = 10
+		sortir
+	cas "rouge":
+		resistance = 20
+		sortir
+	....
+	defaut:
+		Afficher ("Ce n'est pas une couleur valide")
+		sortir
+fin-choisir
+
+Choisir (couleur2)
+	cas "noir":
+		sortir
+	cas "brun":
+		resistance += 1
+		sortir
+	cas "rouge":
+		resistance += 2
+		sortir
+	....
+	defaut:
+		Afficher ("Ce n'est pas une couleur valide")
+		sortir
+Fin-choisir
+
+Choisir (couleur3)
+	cas "noir":
+		sortir
+	cas "brun":
+		resistance = resistance * 10
+		sortir
+	cas "rouge":
+		resistance = resistance * 100
+		sortir
+	....
+	defaut:
+		Afficher ("Ce n'est pas une couleur valide")
+		sortir
+Fin-choisir
+ 
+Choisir (couleur4)
+	cas "or":
+		tolerance = 0.05
+		sortir
+	cas "argent":
+		tolerance = 0.10
+		sortir
+	defaut:
+		Afficher ("Ce n'est pas une couleur valide")
+		Sortir
+Fin-choisir
+
+Afficher ("La résistance est de : " + resistance)
+Afficher ("La tolérance est de : " + (tolerance*100) + (" %") )
+
+Afficher ("Terminé")

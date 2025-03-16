@@ -1,0 +1,53 @@
+Entier jour, mois annee
+Entier nbJourAnnee, nbJourTotal
+Entier nbAnneeBissextile
+
+Afficher ("Entrez le jour, le mois, l'année")
+jour = lireClavier()
+mois = lireClavier()
+annee = lireClavier()
+
+Choisir (mois)
+cas : 1
+	Sortir
+cas : 2
+	nbJourAnnee = 31
+	Sortir
+cas : 3
+	nbJourAnnee = 31 + 28
+	Sortir
+cas 4: 
+	nbJourAnnee = 31 + 28 + 31
+	Sortir
+......
+fin choisir
+
+si (mois > 2 ET anneeBissextile == vrai)
+	alors nbJourAnnee = nbJourAnnee + 1
+fin-si
+
+nbJourAnnee = nbJourAnnee + jour
+
+Afficher ("Depuis le début de l'année, il y a : " + nbJourAnnee)
+
+
+// Il faut encore calculer le nombre de jours depuis le 1/01/2000
+// Il faut calculer le nombre d'années complètes de 365 jours 
+nbJourTotal = nbJourAnnee + ((annee - 2000) * 365)
+
+//  et ajouter le nombre d'années bissextiles depuis 2000
+nbAnneeBissextile = 1 + (annee - 2000) / 4
+
+nbJourTotal = nbJourTotal + nbAnneeBissextile
+Afficher ("Depuis le 1/01/2000, il y a : " + nbJourTotal + " jours")
+
+
+// Il faut déterminer le jour de la semaine
+// Comme le premier jour (1/01/2000) était un samedi, alors numDuJour == 0 correspond à un samedi 
+
+numDuJour = (nbJourTotal % 7)
+
+Afficher("Le numéro du jour est : " + numDuJour)
+
+
+
