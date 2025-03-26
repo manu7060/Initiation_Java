@@ -1,0 +1,55 @@
+	
+	Entier tab[10]
+	
+	// Initialiser le tableau
+	Pour (i=0; i<tab.longeur; ++i)
+		Afficher ("Entrez une valeur : ")
+		tab[i] = lireClavier()
+	fin-pour
+	
+	// Afficher tous les éléments du tableau
+	Pour (i=0; i<tab.longueur; ++i)
+		Afficher ("L'élément du tableau : " + tab[i]
+	fin-pour
+	
+	//Rechercher le plus grand
+	Entier indiceDuPlusGrand
+	indiceDuPlausGrand = 0
+	Entier lePlusGrand
+	lePlusGrand = tab[0]
+	Pour (i=0; i<tab.longueur; ++i)
+		si (tab[i] > lePlusGrand
+			alors
+				lePlusGrand = tab[i]
+				indiceDuPlusGrand = i
+		fin-si
+	Fin-pour
+
+	//Rechercher le plus petit
+	Entier indiceDuPlausPetit = 0
+	Entier lePlusPetit = tab[0]
+	Pour (i=0; i<tab.longueur; ++i)
+		si (tab[i] < lePlusPetit
+			alors
+				lePlusPetit = tab[i]
+				indiceDuPlusPetit = i
+		fin-si
+	Fin-pour
+	
+	Afficher ("le plus grand est : " + lePlusGrand + " son indice est : " + indiceDuPlusGrand)
+*** Ajouter le calcul de la somme et de la moyenne
+
+
+	
+	// Permuter 2 éléments du tableau
+	Entier temp // Déclaration d'une variable temporaire
+	
+	temp = tab[indiceDuPlusGrand]
+	tab[indiceDuPlusGrand] = tab[indiceDuPlusPetit]
+	tab[indiceDuPlusPetit] = temp
+	
+	// Afficher le tableau après la permutation
+	Pour (i=0; i<tab.longueur; ++i)
+		Afficher ("L'élément du tableau : " + tab[i]
+	fin-pour
+	
