@@ -5,7 +5,7 @@ public class JourAnnee {
 	public static void main(String[] args) {
 		Scanner lireClavier = new Scanner(System.in);
 		int jour, mois, annee;
-		int nbJourAnnee;// = 0, nbJourTotal, jourSemaine;
+		int nbJourAnnee;
 		// Ici, j'utilise un tableau pour afficher plus facilement le jour de la semaine
 		String [] tabJour = {"samedi", "dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi"};
 
