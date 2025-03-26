@@ -1,0 +1,28 @@
+DEBUT
+
+	Entier ref        /** variable de comptage de la première boucle
+	Entier i          /** variable de comptage de la deuxième boucle
+	Entier indiceMin  /** indice de l’élément le plus petit trouvé
+	Entier tmp        /** variable temporaire pour la permutation
+
+	// Remplir le tableau de valeurs aléatoires comprises entre 0 et 100
+
+	// Afficher le tableau non trié
+	
+	Pour (ref = 0; ref < longueur du tableau-1; ++ref)
+	    indiceMin = ref
+	    pour (i = ref+1; i<longueur du tableau; ++i)
+	        si (tableau[i] < tableau[indiceMin])
+	            indiceMin = i
+	        fin-si
+	    fin-pour
+	
+	    tmp = tableau[ref]
+	    tableau[ref] = tableau[indiceMin]
+	    tableau[indiceMin] = tmp
+	
+	Fin-pour
+
+	// Afficher le tableau trié
+
+FIN

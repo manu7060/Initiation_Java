@@ -1,0 +1,24 @@
+DEBUT
+
+	Entier j    /** variable de comptage de la première boucle **/
+	Entier i    /** variable de comptage de la deuxième boucle **/
+	Entier tmp  /** variable temporaire pour la permutation **/
+
+	// Remplir le tableau de valeurs aléatoires comprises entre 0 et 100
+
+	// Afficher le tableau non trié
+	
+	pour (j = longueur du tableau; j > 1; --j)
+	    pour (i = 0; i < j-1; ++i)
+	        si (tableau[i+1] < tableau[i])
+	        alors
+	            tmp = tab[i]
+	            tableau[i] = tableau[i+1]
+	            tableau[i+1] = tmp
+	        fin si
+	    fin pour
+	fin pour
+
+	// Afficher le tableau trié
+
+FIN
