@@ -37,9 +37,15 @@
 	Fin-pour
 	
 	Afficher ("le plus grand est : " + lePlusGrand + " son indice est : " + indiceDuPlusGrand)
-*** Ajouter le calcul de la somme et de la moyenne
 
-
+	// calcul de la somme
+	Entier somme = 0
+	Flottant moyenne
+	Pour (i=0; i<tab.longueur; ++i)
+		somme += tab[i]
+	Fin-pour
+	moyenne = somme / tab.longueur
+	Afficher ("La somme : " + somme + ", la moyenne : " + moyenne)
 	
 	// Permuter 2 éléments du tableau
 	Entier temp // Déclaration d'une variable temporaire
