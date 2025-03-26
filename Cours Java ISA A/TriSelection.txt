@@ -1,0 +1,38 @@
+DEBUT
+    // Déclaration du tableau
+    Déclarer tableau[N]  // N est la taille du tableau
+    
+    // Remplir le tableau avec des valeurs
+    POUR i ← 0 JUSQU’À N-1 FAIRE
+        Lire tableau[i]
+    FIN POUR
+
+    // Affichage du tableau non trié
+    Afficher "Tableau non trié :"
+    POUR i ← 0 JUSQU’À N-1 FAIRE
+        Afficher tableau[i]
+    FIN POUR
+
+    // Tri par sélection
+    POUR i ← 0 JUSQU’À N-2 FAIRE
+        indiceMin ← i
+        POUR j ← i+1 JUSQU’À N-1 FAIRE
+            SI tableau[j] < tableau[indiceMin] ALORS
+                indiceMin ← j
+            FIN SI
+        FIN POUR
+
+        // Échanger tableau[i] avec tableau[indiceMin] si nécessaire
+        SI indiceMin ≠ i ALORS
+            temp ← tableau[i]
+            tableau[i] ← tableau[indiceMin]
+            tableau[indiceMin] ← temp
+        FIN SI
+    FIN POUR
+
+    // Affichage du tableau trié
+    Afficher "Tableau trié :"
+    POUR i ← 0 JUSQU’À N-1 FAIRE
+        Afficher tableau[i]
+    FIN POUR
+FIN
