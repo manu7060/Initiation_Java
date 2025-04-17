@@ -1,0 +1,22 @@
+Programme pour vérifier les EAN8 et les EAN13
+Chaine codeEAN
+
+// boucle infinie pour lire les codes EAN
+Tant que (vrai)
+
+	Afficher("Entrez un code EAN : ")
+	codeEAN = lireClavier()
+
+	Si (codeEAN.longueur == 8)
+		alors
+			//vérifier le code EAN8
+		sinon si (codeEAN.longueur == 13)
+			alors
+				//vérifier le code EAN13
+	fin-si
+
+fin-tanque
+
+
+
+si (longueur != 8 || longueur != 13)
