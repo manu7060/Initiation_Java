@@ -1,0 +1,55 @@
+Debut Programme
+
+	Flottant valeurIN[5]
+	Flottant valeurOUT[5]
+	Entier typeCapteur
+
+
+	Faire:
+		Afficher ("Quel capteur avez-vous?")
+		Afficher (" 1: TMP35")
+		Afficher (" 2: TMP36")
+		Afficher (" 3: TMP37")
+		Afficher ("Entrez votre choix : ")
+		typeCapteur = lireClavier()
+	Tant que (typeCapteur < 1 ET typeCapteur > 3)
+	
+	Afficher ("Entrez 5 valeurs de Vout du capteur"
+	Pour (i=0; i<5; ++i)
+		Afficher (" Vout " + i + " : ")
+		valeurIN[i] = lireClavier();
+		valeurOUT[i] = calculerTemperature (valeurIN[i])
+	Fin-pour
+	
+	afficherTemperature(valeurOUT)
+
+Fin Programme
+
+
+
+Fonction calculerTemperature (Flottant valeurIN, Entier typeCapteur)
+	Flottant temperature
+	Choisir (typeCapteur)
+		cas 1:
+			temperature = ( (valeurIN - 250) / 10 ) + 25
+			Sortir
+		cas 2:
+			temperature = ( (valeurIN - 750) / 10 ) + 25
+			Sortir
+		cas 3:
+			temperature = ( (valeurIN - 500) / 20 ) + 25
+			Sortir
+		defaut:
+			// Erreur ce n'est pas un capteur connu
+			temperature = -999
+	Fin-Choisir
+	retourner (temperature)
+
+Fin Fonction
+
+
+Fonction afficherTemperature(Flottant valeurOUT[])
+	Pour (i=0; i<valeurOUT.longueur; ++i)
+		Afficher ("La tmpérature est de : " + valeurOUT[i] + " degrés)
+	Fin-pour
+Fin Fonction

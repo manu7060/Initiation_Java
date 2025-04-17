@@ -1,0 +1,26 @@
+
+
+Main
+	Entier tableau [20]
+	
+	remplirTableau (tableau)
+	afficherTableau (tableau)
+	trierTableau (tableau)
+	afficherTableau (tableau)
+
+Fin-Main
+
+
+Fonction remplirTableau (tab)
+	Pour (i=0; i<tab.longueur; ++i)
+		tab[i] = Random(0..100)
+	fin-pour
+Fin-Fonction
+
+Fonction afficherTableau (tab)
+	Pour (i=0; i<tab.longueur; ++i)
+		Afficher (tab[i])
+	Fin-pour
+Fin-Fonction
+
+
