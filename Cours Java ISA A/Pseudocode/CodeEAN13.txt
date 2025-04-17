@@ -1,0 +1,35 @@
+
+
+Chaine codeBarre
+
+
+Entier somme = 0
+Entier reste
+
+
+Pour (i=0; i < codeBarre.longueur - 1; ++i)
+	
+	si (i % 2 == 0)
+		alors // i est pair
+			somme += codeBarre[i]
+		sinon
+			somme += codeBarre[i] * 3
+	Fin-si
+	
+Fin-pour
+	
+reste = somme % 10
+
+si (reste == 0)
+	alors
+		reste = 0
+	sinon
+		reste = 10 - reste
+Fin-si
+	
+si (reste == codeBarre[codeBarre.longueur - 1] )
+	alors
+		Afficher ("Le code est bon")
+	sinon
+		Afficher ("Le code n'est pas bon")
+Fin-si 	
