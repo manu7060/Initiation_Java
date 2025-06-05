@@ -1,0 +1,75 @@
+Début du programme principal
+	Chaine typeCapteur
+	
+	Entier NOMBRE = 5
+	Chaine tabCapteur[]
+	Entier tabTension[]
+	Flottant tabTemperature[]
+	
+	Pour (i=0; i<NOMBRE; ++i)
+		Afficher ("Entrez les valeurs pour le capteur no : " + (i+1))
+		tabCapteur[i] = lireTensionCapteur()
+		tabTension[i] = lireTensionCapteur()
+		tabTemperature[i] = calculerTemperature (tabCapteur[i], tabTension[i])
+	Fin pour
+	
+	Pour (i=0; i<NOMBRE; ++i)
+		Afficher (tabCapteur[i] + tabTension[i] + tabTemperature[i])
+	Fin pour
+	
+	Afficher ("Terminé")
+
+	Fin du programme princial
+
+
+Fonction Chaine lireTypeCapteur ()
+	Afficher ("Entrez le type du capteur : ")
+	typeCapteur = lireClavier()
+	
+	Tant que (typeCapteur != "tmp35" OU typeCapteur != "tmp36" OU typeCapteur != "tmp37")
+		// boucle pour vérifier que le type de capteur est correct
+		Afficher ("Ce n'est pas un type de capteur valide. Recommencez")
+		Afficher ("Entrez le type du capteur : ")
+		typeCapteur = lireClavier()
+	Fin Tant que
+	
+	Retour (typeCapteur)
+	
+	fin fonction
+
+
+Fonction Entier lireTensionCapteur()
+	Afficher ("Entrez la tension relevée sur le capteur:")
+	tensionCapteur = lireClavier()
+	Tant que (tensionCapteur < 0 OU tensionCapteur > 5)
+		Afficher ("Le tension n'est pas correcte, recommencez")
+		Afficher ("Entrez la tension relevée sur le capteur:")
+		tensionCapteur = lireClavier()
+	Fin Tant que
+	retourner (tensionCapteur)
+	
+	fin fonction
+	
+	
+Fonction Flottant calculerTemperature (typeCapteur, tensionCapteur)
+	Flottant temperatureCapteur
+	
+	Choisir (typeCapteur)
+	Cas "tmp35"
+		temperatureCapteur = ((tensionCapteur - 250f) / 10f) + 25f
+		Sortir
+	Cas "tmp36"
+		temperatureCapteur = ((tensionCapteur - 750f) / 10f) + 25f
+		Sortir
+	Cas "tmp37"
+		temperatureCapteur = ((tensionCapteur - 500f) / 20f) + 25f
+		Sortir
+	Defaut
+		// il y a une erreur sur le type de capteur
+		temperatureCapteur = -100f
+	Fin Choisir
+	
+	Retourner (temperatureCapteur)
+	
+	Fin fonction
+	
